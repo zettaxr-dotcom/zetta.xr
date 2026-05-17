@@ -44,21 +44,30 @@ body{
 
 .topbar{
     width:100%;
-    padding:18px 20px;
+    padding:14px 16px;
     display:flex;
-    justify-content:center;
     align-items:center;
-    position:relative;
-    z-index:10;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(14px);
+    background:rgba(20,20,20,0.45);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .logo-box{
-    width:60px;
-    height:60px;
-    border-radius:18px;
+    width:48px;
+    height:48px;
+    border-radius:14px;
     overflow:hidden;
     background:#2b2b2b;
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 .logo-box img{
@@ -67,11 +76,43 @@ body{
     object-fit:cover;
 }
 
+.logo-text h1{
+    font-size:18px;
+    font-weight:700;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#cfcfcf;
+}
+
+.top-icons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icon-btn{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backdrop-filter:blur(10px);
+}
+
+.icon-btn i{
+    font-size:20px;
+    color:#fff;
+}
+
 /* PROFILE */
 
 .profile-section{
     width:100%;
-    padding:10px 20px 70px;
+    padding:30px 20px 80px;
     position:relative;
     z-index:5;
 }
@@ -84,8 +125,8 @@ body{
 }
 
 .profile-img{
-    width:120px;
-    height:120px;
+    width:115px;
+    height:115px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid rgba(255,255,255,0.15);
@@ -95,20 +136,19 @@ body{
 .profile-box h1{
     font-size:30px;
     font-weight:700;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .profile-box h2{
-    font-size:16px;
-    font-weight:500;
-    color:#cfcfcf;
+    font-size:15px;
+    color:#d5d5d5;
     margin-bottom:15px;
 }
 
 .profile-box p{
     font-size:14px;
     line-height:1.7;
-    color:#d8d8d8;
+    color:#d7d7d7;
     margin-bottom:25px;
 }
 
@@ -124,17 +164,11 @@ body{
 .social-media a{
     width:52px;
     height:52px;
-    background:#3a3a3a;
+    background:#3b3b3b;
     border-radius:18px;
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:0.3s;
-}
-
-.social-media a:hover{
-    transform:translateY(-5px);
-    background:#4a4a4a;
 }
 
 .social-media img{
@@ -147,10 +181,10 @@ body{
 
 .top-wave{
     width:100%;
-    height:130px;
-    background:#2b2b2b;
-    margin-top:-20px;
+    height:90px;
+    background:#4b4b4b;
     border-radius:50% 50% 0 0;
+    margin-top:-20px;
     position:relative;
     z-index:3;
 }
@@ -159,10 +193,10 @@ body{
 
 main{
     width:100%;
-    background:#2b2b2b;
+    background:#4b4b4b;
+    padding:20px 15px 40px;
     position:relative;
     z-index:2;
-    padding:20px 15px 40px;
 }
 
 /* SECTION */
@@ -196,23 +230,38 @@ main{
 }
 
 .popular-card{
-    width:100%;
-    border-radius:20px;
+    background:#d7d700;
+    border-radius:22px;
     overflow:hidden;
-    background:#1e1e1e;
+    text-decoration:none;
+    color:#111;
 }
 
 .popular-card img{
     width:100%;
-    display:block;
+    height:130px;
     object-fit:cover;
+    display:block;
+}
+
+.popular-info{
+    padding:12px;
+}
+
+.popular-info h3{
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.popular-info p{
+    font-size:12px;
 }
 
 /* CATEGORY */
 
 .category-buttons{
     display:flex;
-    gap:10px;
+    gap:12px;
     overflow-x:auto;
     scrollbar-width:none;
 }
@@ -223,14 +272,12 @@ main{
 
 .category-buttons button{
     border:none;
-    padding:9px 18px;
-    border-radius:999px;
-    background:#a8a8a8;
-    color:#111;
-    font-size:12px;
-    font-weight:600;
+    background:#7e7494;
+    color:#fff;
+    padding:11px 20px;
+    border-radius:14px;
+    font-size:13px;
     white-space:nowrap;
-    cursor:pointer;
 }
 
 /* PROMOTION */
@@ -239,7 +286,6 @@ main{
     display:flex;
     gap:14px;
     overflow-x:auto;
-    scroll-behavior:smooth;
     scrollbar-width:none;
 }
 
@@ -248,16 +294,14 @@ main{
 }
 
 .promo-card{
-    min-width:320px;
+    min-width:310px;
     border-radius:22px;
     overflow:hidden;
-    flex-shrink:0;
-    background:#1d1d1d;
 }
 
 .promo-card img{
     width:100%;
-    height:180px;
+    height:175px;
     object-fit:cover;
     display:block;
 }
@@ -277,7 +321,7 @@ main{
 
 .minecraft-card img{
     width:100%;
-    aspect-ratio:9/16;
+    aspect-ratio:3/4;
     object-fit:cover;
     border-radius:22px;
     display:block;
@@ -285,8 +329,8 @@ main{
 
 .minecraft-card h3{
     text-align:center;
-    margin-top:10px;
-    font-size:13px;
+    margin-top:8px;
+    font-size:12px;
     font-weight:600;
 }
 
@@ -296,7 +340,6 @@ main{
     display:flex;
     gap:14px;
     overflow-x:auto;
-    scroll-behavior:smooth;
     scrollbar-width:none;
 }
 
@@ -305,23 +348,22 @@ main{
 }
 
 .content-card{
-    min-width:320px;
+    min-width:310px;
     text-decoration:none;
     color:#fff;
 }
 
 .content-card img{
     width:100%;
-    height:180px;
+    height:175px;
     object-fit:cover;
-    border-radius:20px;
+    border-radius:22px;
     display:block;
 }
 
 .content-card h3{
     margin-top:10px;
-    font-size:15px;
-    font-weight:600;
+    font-size:14px;
 }
 
 /* SHOP */
@@ -333,13 +375,12 @@ main{
 }
 
 .shop-card{
-    width:100%;
     text-decoration:none;
 }
 
 .shop-card img{
     width:100%;
-    aspect-ratio:9/16;
+    aspect-ratio:3/4;
     object-fit:cover;
     border-radius:22px;
     display:block;
@@ -349,20 +390,33 @@ main{
 
 .footer{
     width:100%;
-    padding:40px 20px;
-    background:#111;
-    text-align:center;
+    background:#4b4b4b;
     position:relative;
-    z-index:2;
+    overflow:hidden;
+}
+
+/* FOOTER WAVE */
+
+.footer-wave{
+    width:100%;
+    height:90px;
+    background:#111;
+    border-radius:0 0 50% 50%;
+}
+
+/* FOOTER CONTENT */
+
+.footer-content{
+    padding:40px 20px 60px;
 }
 
 .footer-logo{
-    width:70px;
-    height:70px;
+    width:80px;
+    height:80px;
     border-radius:20px;
     overflow:hidden;
-    display:inline-block;
-    margin-bottom:15px;
+    margin-bottom:20px;
+    display:block;
 }
 
 .footer-logo img{
@@ -371,12 +425,42 @@ main{
     object-fit:cover;
 }
 
-.footer p{
-    font-size:13px;
-    color:#bdbdbd;
-    line-height:1.7;
-    max-width:400px;
-    margin:auto;
+.footer-desc{
+    font-size:15px;
+    line-height:2;
+    color:#f1f1f1;
+    margin-bottom:30px;
+}
+
+.footer-social{
+    display:flex;
+    gap:18px;
+    margin-bottom:40px;
+}
+
+.footer-social img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.footer-menu{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-menu h3{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.footer-menu a{
+    display:block;
+    margin-bottom:16px;
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
 }
 
 /* DESKTOP */
@@ -388,25 +472,17 @@ main{
     }
 
     .popular-grid{
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
     .minecraft-grid{
-        grid-template-columns:repeat(6,180px);
+        grid-template-columns:repeat(6,160px);
         justify-content:center;
     }
 
     .shop-grid{
-        grid-template-columns:repeat(6,180px);
+        grid-template-columns:repeat(6,160px);
         justify-content:center;
-    }
-
-    .promo-card{
-        min-width:400px;
-    }
-
-    .content-card{
-        min-width:400px;
     }
 
 }
