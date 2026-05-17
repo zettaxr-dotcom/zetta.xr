@@ -9,9 +9,11 @@ function autoPromoSlide(){
 
     if(!promoSlider) return;
 
+    const promoCard =
+    promoSlider.querySelector('.promo-card');
+
     const cardWidth =
-    promoSlider.querySelector('.promo-card')
-    ?.offsetWidth || 324;
+    promoCard?.offsetWidth || 324;
 
     promoScroll += cardWidth + 14;
 
@@ -43,9 +45,11 @@ function autoContentSlide(){
 
     if(!contentSlider) return;
 
+    const contentCard =
+    contentSlider.querySelector('.content-card');
+
     const cardWidth =
-    contentSlider.querySelector('.content-card')
-    ?.offsetWidth || 324;
+    contentCard?.offsetWidth || 324;
 
     contentScroll += cardWidth + 14;
 
@@ -84,6 +88,7 @@ function revealSection(){
         if(sectionTop < windowHeight - 80){
 
             section.style.opacity = "1";
+
             section.style.transform =
             "translateY(0px)";
 
@@ -96,8 +101,10 @@ function revealSection(){
 sections.forEach(section => {
 
     section.style.opacity = "0";
+
     section.style.transform =
     "translateY(40px)";
+
     section.style.transition =
     "0.7s ease";
 
@@ -117,11 +124,6 @@ document.querySelectorAll(
 '.category-buttons button'
 );
 
-const minecraftSection =
-document.querySelector(
-'.minecraft-grid'
-);
-
 categoryButtons.forEach(button => {
 
     button.addEventListener('click',() => {
@@ -134,9 +136,15 @@ categoryButtons.forEach(button => {
 
         button.classList.add('active');
 
-        if(minecraftSection){
+        const target =
+        button.getAttribute('data-target');
 
-            minecraftSection.scrollIntoView({
+        const targetElement =
+        document.getElementById(target);
+
+        if(targetElement){
+
+            targetElement.scrollIntoView({
                 behavior:'smooth',
                 block:'start'
             });
@@ -161,21 +169,8 @@ buttons.forEach(button => {
 
         setTimeout(() => {
 
-            if(
-                button.classList.contains(
-                'active'
-                )
-            ){
-
-                button.style.transform =
-                "scale(1)";
-
-            }else{
-
-                button.style.transform =
-                "scale(1)";
-
-            }
+            button.style.transform =
+            "scale(1)";
 
         },120);
 
