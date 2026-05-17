@@ -266,7 +266,7 @@ main{
 
 .minecraft-grid{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:12px;
 }
 
@@ -277,14 +277,16 @@ main{
 
 .minecraft-card img{
     width:100%;
-    border-radius:18px;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    border-radius:22px;
     display:block;
 }
 
 .minecraft-card h3{
     text-align:center;
     margin-top:10px;
-    font-size:14px;
+    font-size:13px;
     font-weight:600;
 }
 
@@ -326,21 +328,21 @@ main{
 
 .shop-grid{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:12px;
 }
 
 .shop-card{
     width:100%;
-    border-radius:18px;
-    overflow:hidden;
-    background:#1e1e1e;
+    text-decoration:none;
 }
 
 .shop-card img{
     width:100%;
-    display:block;
+    aspect-ratio:9/16;
     object-fit:cover;
+    border-radius:22px;
+    display:block;
 }
 
 /* FOOTER */
@@ -390,12 +392,13 @@ main{
     }
 
     .minecraft-grid{
-        grid-template-columns:repeat(3,250px);
+        grid-template-columns:repeat(6,180px);
         justify-content:center;
     }
 
     .shop-grid{
-        grid-template-columns:repeat(6,1fr);
+        grid-template-columns:repeat(6,180px);
+        justify-content:center;
     }
 
     .promo-card{
