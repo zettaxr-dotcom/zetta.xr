@@ -9,12 +9,16 @@
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
+    width:100%;
 }
 
 body{
     background:#111;
     color:#fff;
     overflow-x:hidden;
+    width:100%;
+    max-width:100%;
     position:relative;
 }
 
@@ -193,14 +197,14 @@ body{
 /* TOP WAVE */
 
 .top-wave{
-    width:120%;
+    width:100%;
     height:120px;
     background:#4b4b4b;
     border-radius:50% 50% 0 0;
-    margin-left:-10%;
     margin-top:-20px;
     position:relative;
     z-index:3;
+    overflow:hidden;
 }
 
 /* MAIN */
@@ -211,6 +215,7 @@ main{
     padding:20px 15px 40px;
     position:relative;
     z-index:2;
+    overflow:hidden;
 }
 
 /* SECTION */
@@ -322,6 +327,7 @@ main{
     overflow-x:auto;
     scrollbar-width:none;
     scroll-behavior:smooth;
+    padding-bottom:4px;
 }
 
 .promo-slider::-webkit-scrollbar{
@@ -330,6 +336,7 @@ main{
 
 .promo-card{
     min-width:310px;
+    max-width:310px;
     border-radius:22px;
     overflow:hidden;
     flex-shrink:0;
@@ -378,6 +385,7 @@ main{
     overflow-x:auto;
     scrollbar-width:none;
     scroll-behavior:smooth;
+    padding-bottom:4px;
 }
 
 .content-slider::-webkit-scrollbar{
@@ -386,6 +394,7 @@ main{
 
 .content-card{
     min-width:310px;
+    max-width:310px;
     text-decoration:none;
     color:#fff;
     flex-shrink:0;
@@ -437,12 +446,12 @@ main{
 /* FOOTER WAVE */
 
 .footer-wave{
-    width:120%;
+    width:100%;
     height:120px;
     background:#4b4b4b;
     border-radius:0 0 50% 50%;
-    margin-left:-10%;
     margin-bottom:-2px;
+    overflow:hidden;
 }
 
 /* FOOTER CONTENT */
