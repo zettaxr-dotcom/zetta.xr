@@ -76,7 +76,6 @@ function revealSection(){
         if(sectionTop < windowHeight - 80){
 
             section.style.opacity = "1";
-
             section.style.transform =
             "translateY(0px)";
 
@@ -89,10 +88,8 @@ function revealSection(){
 sections.forEach(section => {
 
     section.style.opacity = "0";
-
     section.style.transform =
     "translateY(40px)";
-
     section.style.transition = "0.7s";
 
 });
@@ -101,51 +98,7 @@ window.addEventListener('scroll',revealSection);
 
 revealSection();
 
-// SOCIAL EFFECT
-
-const socialBox =
-document.querySelectorAll('.social-media a');
-
-socialBox.forEach(item => {
-
-    item.addEventListener('mouseenter',() => {
-
-        item.style.transform =
-        "translateY(-6px) scale(1.05)";
-
-    });
-
-    item.addEventListener('mouseleave',() => {
-
-        item.style.transform =
-        "translateY(0px) scale(1)";
-
-    });
-
-});
-
-// BUTTON CLICK EFFECT
-
-const buttons =
-document.querySelectorAll('button');
-
-buttons.forEach(button => {
-
-    button.addEventListener('click',() => {
-
-        button.style.transform = "scale(0.95)";
-
-        setTimeout(() => {
-
-            button.style.transform = "scale(1)";
-
-        },120);
-
-    });
-
-});
-
-// CATEGORY ACTIVE
+// CATEGORY BUTTON ACTIVE
 
 const categoryButtons =
 document.querySelectorAll(
@@ -168,18 +121,68 @@ categoryButtons.forEach(button => {
 
 });
 
-// PARALLAX VIDEO EFFECT
+// BUTTON CLICK EFFECT
+
+const buttons =
+document.querySelectorAll('button');
+
+buttons.forEach(button => {
+
+    button.addEventListener('click',() => {
+
+        button.style.transform =
+        "scale(0.95)";
+
+        setTimeout(() => {
+
+            button.style.transform =
+            "scale(1)";
+
+        },120);
+
+    });
+
+});
+
+// SOCIAL EFFECT
+
+const socialBox =
+document.querySelectorAll(
+'.social-media a'
+);
+
+socialBox.forEach(item => {
+
+    item.addEventListener('mouseenter',() => {
+
+        item.style.transform =
+        "translateY(-6px) scale(1.05)";
+
+    });
+
+    item.addEventListener('mouseleave',() => {
+
+        item.style.transform =
+        "translateY(0px) scale(1)";
+
+    });
+
+});
+
+// VIDEO PARALLAX
 
 const bgVideo =
 document.querySelector('.bg-video');
 
-window.addEventListener('scroll',() => {
+if(bgVideo){
 
-    if(!bgVideo) return;
+    window.addEventListener('scroll',() => {
 
-    const scrollY = window.scrollY;
+        const scrollY = window.scrollY;
 
-    bgVideo.style.transform =
-    `translateY(${scrollY * 0.15}px)`;
+        bgVideo.style.transform =
+        `translateY(${scrollY * 0.15}px)`;
 
-});
+    });
+
+}
