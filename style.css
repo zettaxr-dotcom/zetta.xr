@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* VIDEO BACKGROUND */
+
+.bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    z-index:-2;
+}
+
+/* TOPBAR */
+
+.topbar{
+    width:100%;
+    padding:18px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:10;
+}
+
+.logo-box{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#2b2b2b;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* PROFILE */
+
+.profile-section{
+    width:100%;
+    padding:10px 20px 70px;
+    position:relative;
+    z-index:5;
+}
+
+.profile-box{
+    width:100%;
+    max-width:450px;
+    margin:auto;
+    text-align:center;
+}
+
+.profile-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,0.15);
+    margin-bottom:15px;
+}
+
+.profile-box h1{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.profile-box h2{
+    font-size:16px;
+    font-weight:500;
+    color:#cfcfcf;
+    margin-bottom:15px;
+}
+
+.profile-box p{
+    font-size:14px;
+    line-height:1.7;
+    color:#d8d8d8;
+    margin-bottom:25px;
+}
+
+/* SOCIAL */
+
+.social-media{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-media a{
+    width:52px;
+    height:52px;
+    background:#3a3a3a;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+}
+
+.social-media a:hover{
+    transform:translateY(-5px);
+    background:#4a4a4a;
+}
+
+.social-media img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+
+/* TOP WAVE */
+
+.top-wave{
+    width:100%;
+    height:130px;
+    background:#2b2b2b;
+    margin-top:-20px;
+    border-radius:50% 50% 0 0;
+    position:relative;
+    z-index:3;
+}
+
+/* MAIN */
+
+main{
+    width:100%;
+    background:#2b2b2b;
+    position:relative;
+    z-index:2;
+    padding:20px 15px 40px;
+}
+
+/* SECTION */
+
+.section-box{
+    margin-bottom:45px;
+}
+
+.section-title{
+    margin-bottom:18px;
+}
+
+.section-title h2{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.section-title p{
+    font-size:13px;
+    color:#d0d0d0;
+    line-height:1.6;
+}
+
+/* POPULAR */
+
+.popular-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.popular-card{
+    width:100%;
+    border-radius:20px;
+    overflow:hidden;
+    background:#1e1e1e;
+}
+
+.popular-card img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+/* CATEGORY */
+
+.category-buttons{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.category-buttons::-webkit-scrollbar{
+    display:none;
+}
+
+.category-buttons button{
+    border:none;
+    padding:9px 18px;
+    border-radius:999px;
+    background:#a8a8a8;
+    color:#111;
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+}
+
+/* PROMOTION */
+
+.promo-slider{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+
+.promo-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.promo-card{
+    min-width:320px;
+    border-radius:22px;
+    overflow:hidden;
+    flex-shrink:0;
+    background:#1d1d1d;
+}
+
+.promo-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+}
+
+/* MINECRAFT */
+
+.minecraft-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:12px;
+}
+
+.minecraft-card{
+    text-decoration:none;
+    color:#fff;
+}
+
+.minecraft-card img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+}
+
+.minecraft-card h3{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* CONTENT */
+
+.content-slider{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+
+.content-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.content-card{
+    min-width:320px;
+    text-decoration:none;
+    color:#fff;
+}
+
+.content-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+}
+
+.content-card h3{
+    margin-top:10px;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* SHOP */
+
+.shop-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:12px;
+}
+
+.shop-card{
+    width:100%;
+    border-radius:18px;
+    overflow:hidden;
+    background:#1e1e1e;
+}
+
+.shop-card img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+/* FOOTER */
+
+.footer{
+    width:100%;
+    padding:40px 20px;
+    background:#111;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.footer-logo{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    overflow:hidden;
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+.footer-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.footer p{
+    font-size:13px;
+    color:#bdbdbd;
+    line-height:1.7;
+    max-width:400px;
+    margin:auto;
+}
+
+/* DESKTOP */
+
+@media(min-width:900px){
+
+    .profile-box{
+        max-width:650px;
+    }
+
+    .popular-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .minecraft-grid{
+        grid-template-columns:repeat(3,250px);
+        justify-content:center;
+    }
+
+    .shop-grid{
+        grid-template-columns:repeat(6,1fr);
+    }
+
+    .promo-card{
+        min-width:400px;
+    }
+
+    .content-card{
+        min-width:400px;
+    }
+
+}
