@@ -1,6 +1,7 @@
 // PROMO AUTO SLIDE
 
-const promoSlider = document.querySelector('.promo-slider');
+const promoSlider =
+document.querySelector('.promo-slider');
 
 let promoScroll = 0;
 
@@ -12,7 +13,8 @@ function autoPromoSlide(){
 
     if(
         promoScroll >=
-        promoSlider.scrollWidth - promoSlider.clientWidth
+        promoSlider.scrollWidth -
+        promoSlider.clientWidth
     ){
         promoScroll = 0;
     }
@@ -28,7 +30,8 @@ setInterval(autoPromoSlide,3000);
 
 // CONTENT AUTO SLIDE
 
-const contentSlider = document.querySelector('.content-slider');
+const contentSlider =
+document.querySelector('.content-slider');
 
 let contentScroll = 0;
 
@@ -40,7 +43,8 @@ function autoContentSlide(){
 
     if(
         contentScroll >=
-        contentSlider.scrollWidth - contentSlider.clientWidth
+        contentSlider.scrollWidth -
+        contentSlider.clientWidth
     ){
         contentScroll = 0;
     }
@@ -56,13 +60,15 @@ setInterval(autoContentSlide,3500);
 
 // SCROLL ANIMATION
 
-const sections = document.querySelectorAll('.section-box');
+const sections =
+document.querySelectorAll('.section-box');
 
 function revealSection(){
 
     sections.forEach(section => {
 
-        const windowHeight = window.innerHeight;
+        const windowHeight =
+        window.innerHeight;
 
         const sectionTop =
         section.getBoundingClientRect().top;
@@ -70,7 +76,9 @@ function revealSection(){
         if(sectionTop < windowHeight - 80){
 
             section.style.opacity = "1";
-            section.style.transform = "translateY(0px)";
+
+            section.style.transform =
+            "translateY(0px)";
 
         }
 
@@ -81,7 +89,10 @@ function revealSection(){
 sections.forEach(section => {
 
     section.style.opacity = "0";
-    section.style.transform = "translateY(40px)";
+
+    section.style.transform =
+    "translateY(40px)";
+
     section.style.transition = "0.7s";
 
 });
@@ -90,29 +101,33 @@ window.addEventListener('scroll',revealSection);
 
 revealSection();
 
-// SOCIAL HOVER EFFECT
+// SOCIAL EFFECT
 
-const socialBox = document.querySelectorAll('.social-media a');
+const socialBox =
+document.querySelectorAll('.social-media a');
 
 socialBox.forEach(item => {
 
     item.addEventListener('mouseenter',() => {
 
-        item.style.transform = "translateY(-6px) scale(1.05)";
+        item.style.transform =
+        "translateY(-6px) scale(1.05)";
 
     });
 
     item.addEventListener('mouseleave',() => {
 
-        item.style.transform = "translateY(0px) scale(1)";
+        item.style.transform =
+        "translateY(0px) scale(1)";
 
     });
 
 });
 
-// CLICK EFFECT
+// BUTTON CLICK EFFECT
 
-const buttons = document.querySelectorAll('button');
+const buttons =
+document.querySelectorAll('button');
 
 buttons.forEach(button => {
 
@@ -130,13 +145,39 @@ buttons.forEach(button => {
 
 });
 
+// CATEGORY ACTIVE
+
+const categoryButtons =
+document.querySelectorAll(
+'.category-buttons button'
+);
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener('click',() => {
+
+        categoryButtons.forEach(btn => {
+
+            btn.classList.remove('active');
+
+        });
+
+        button.classList.add('active');
+
+    });
+
+});
+
 // PARALLAX VIDEO EFFECT
+
+const bgVideo =
+document.querySelector('.bg-video');
 
 window.addEventListener('scroll',() => {
 
-    const scrollY = window.scrollY;
+    if(!bgVideo) return;
 
-    const bgVideo = document.querySelector('.bg-video');
+    const scrollY = window.scrollY;
 
     bgVideo.style.transform =
     `translateY(${scrollY * 0.15}px)`;
