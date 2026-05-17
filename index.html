@@ -1,510 +1,257 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
+<body id="top">
 
-    <meta charset="UTF-8">
+<!-- CATEGORY -->
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<section class="section-box">
 
-    <title>Zetta Web</title>
+    <div class="category-buttons">
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- ICON -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    >
-
-</head>
-
-<body>
-
-    <!-- VIDEO BACKGROUND -->
-
-    <video autoplay muted loop playsinline class="bg-video">
-
-        <source
-            src="background.mp4"
-            type="video/mp4"
+        <button
+            class="active"
+            data-target="top"
         >
+            All
+        </button>
 
-    </video>
+        <button
+            data-target="minecraft-section"
+        >
+            Minecraft
+        </button>
 
-    <div class="overlay"></div>
+        <button
+            data-target="content-section"
+        >
+            Content
+        </button>
 
-    <!-- TOPBAR -->
+        <button
+            data-target="shop-section"
+        >
+            Shop
+        </button>
 
-    <header class="topbar">
+    </div>
 
-        <div class="logo-area">
+</section>
 
-            <div class="logo-box">
+<!-- PROMOTION -->
 
-                <img src="logo.png" alt="">
+<section class="section-box">
 
-            </div>
+    <div class="section-title">
 
-            <div class="logo-text">
+        <h2>📢 Promosi</h2>
 
-                <h1>zetta.xr</h1>
+        <p>
+            Promosi dan iklan pilihan terbaru.
+        </p>
 
-                <p>Creator & Developer</p>
+    </div>
 
-            </div>
+    <div class="promo-slider">
 
-        </div>
+        <a href="#" class="promo-card">
+            <img src="promo1.jpg">
+        </a>
 
-        <div class="top-icons">
+        <a href="#" class="promo-card">
+            <img src="promo2.jpg">
+        </a>
 
-            <div class="icon-btn">
+        <a href="#" class="promo-card">
+            <img src="promo3.jpg">
+        </a>
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="#" class="promo-card">
+            <img src="promo4.jpg">
+        </a>
 
-            </div>
+        <a href="#" class="promo-card">
+            <img src="promo5.jpg">
+        </a>
 
-            <div class="icon-btn">
+    </div>
 
-                <i class="fa-solid fa-bars"></i>
+</section>
 
-            </div>
+<!-- MINECRAFT -->
 
-        </div>
+<section
+    class="section-box"
+    id="minecraft-section"
+>
 
-    </header>
+    <div class="section-title">
 
-    <!-- PROFILE -->
+        <h2>⛏ Minecraft</h2>
 
-    <section class="profile-section">
+        <p>
+            Minecraft content pilihan terbaik.
+        </p>
 
-        <div class="profile-box">
+    </div>
 
-            <img
-                src="profile.png"
-                class="profile-img"
-            >
+    <div class="minecraft-grid">
 
-            <h1>Zetta</h1>
+        <a href="#" class="minecraft-card">
 
-            <h2>Creator & Developer</h2>
+            <img src="mod.jpg">
 
-            <p>
-                Deskripsi sementara isi apa aja nanti bebas.
-                Bisa tentang web, komunitas, Minecraft,
-                content creator atau lainnya.
-            </p>
+            <h3>Mod</h3>
 
-            <!-- SOCIAL MEDIA -->
+        </a>
 
-            <div class="social-media">
+        <a href="#" class="minecraft-card">
 
-                <a href="#">
-                    <img src="discord.png">
-                </a>
+            <img src="shader.jpg">
 
-                <a href="#">
-                    <img src="youtube.png">
-                </a>
+            <h3>Shader</h3>
 
-                <a href="#">
-                    <img src="tiktok.png">
-                </a>
+        </a>
 
-                <a href="#">
-                    <img src="instagram.png">
-                </a>
+        <a href="#" class="minecraft-card">
 
-                <a href="#">
-                    <img src="telegram.png">
-                </a>
+            <img src="texture.jpg">
 
-            </div>
+            <h3>Texture</h3>
 
-        </div>
+        </a>
 
-    </section>
+    </div>
 
-    <!-- TOP WAVE -->
+</section>
 
-    <div class="top-wave"></div>
+<!-- CONTENT -->
 
-    <!-- MAIN -->
+<section
+    class="section-box"
+    id="content-section"
+>
 
-    <main>
+    <div class="section-title">
 
-        <!-- POPULAR -->
+        <h2>🎬 Content</h2>
 
-        <section class="section-box">
+        <p>
+            Konten terbaru dari creator.
+        </p>
 
-            <div class="section-title">
+    </div>
 
-                <h2>🔥 Popular Sekarang</h2>
+    <div class="content-slider">
 
-                <p>
-                    Content populer yang lagi ramai dipakai user.
-                </p>
+        <a href="#" class="content-card">
 
-            </div>
+            <img src="content1.jpg">
 
-            <div class="popular-grid">
+            <h3>None</h3>
 
-                <a
-                    href="popular1.html"
-                    class="popular-card"
-                >
+        </a>
 
-                    <img src="popular1.jpg">
+        <a href="#" class="content-card">
 
-                    <div class="popular-info">
+            <img src="content2.jpg">
 
-                        <h3>Popular 1</h3>
+            <h3>None</h3>
 
-                        <p>
-                            Deskripsi sementara.
-                        </p>
+        </a>
 
-                    </div>
+        <a href="#" class="content-card">
 
-                </a>
+            <img src="content3.jpg">
 
-                <a
-                    href="popular2.html"
-                    class="popular-card"
-                >
+            <h3>None</h3>
 
-                    <img src="popular2.jpg">
+        </a>
 
-                    <div class="popular-info">
+        <a href="#" class="content-card">
 
-                        <h3>Popular 2</h3>
+            <img src="content4.jpg">
 
-                        <p>
-                            Deskripsi sementara.
-                        </p>
+            <h3>None</h3>
 
-                    </div>
+        </a>
 
-                </a>
+        <a href="#" class="content-card">
 
-                <a
-                    href="popular3.html"
-                    class="popular-card"
-                >
+            <img src="content5.jpg">
 
-                    <img src="popular3.jpg">
+            <h3>None</h3>
 
-                    <div class="popular-info">
+        </a>
 
-                        <h3>Popular 3</h3>
+    </div>
 
-                        <p>
-                            Deskripsi sementara.
-                        </p>
+</section>
 
-                    </div>
+<!-- SHOP -->
 
-                </a>
+<section
+    class="section-box"
+    id="shop-section"
+>
 
-                <a
-                    href="popular4.html"
-                    class="popular-card"
-                >
+    <div class="section-title">
 
-                    <img src="popular4.jpg">
+        <h2>🛒 Shop</h2>
 
-                    <div class="popular-info">
+        <p>
+            Pilihan item dan layanan terbaik.
+        </p>
 
-                        <h3>Popular 4</h3>
+    </div>
 
-                        <p>
-                            Deskripsi sementara.
-                        </p>
+    <div class="shop-grid">
 
-                    </div>
+        <a href="shop1.html" class="shop-card">
+            <img src="shop1.jpg">
+        </a>
 
-                </a>
+        <a href="shop2.html" class="shop-card">
+            <img src="shop2.jpg">
+        </a>
 
-            </div>
+        <a href="shop3.html" class="shop-card">
+            <img src="shop3.jpg">
+        </a>
 
-        </section>
+        <a href="shop4.html" class="shop-card">
+            <img src="shop4.jpg">
+        </a>
 
-        <!-- CATEGORY -->
+        <a href="shop5.html" class="shop-card">
+            <img src="shop5.jpg">
+        </a>
 
-        <section class="section-box">
+        <a href="shop6.html" class="shop-card">
+            <img src="shop6.jpg">
+        </a>
 
-            <div class="category-buttons">
+        <a href="shop7.html" class="shop-card">
+            <img src="shop7.jpg">
+        </a>
 
-                <button class="active">
-                    All
-                </button>
+        <a href="shop8.html" class="shop-card">
+            <img src="shop8.jpg">
+        </a>
 
-                <button>
-                    Minecraft
-                </button>
+        <a href="shop9.html" class="shop-card">
+            <img src="shop9.jpg">
+        </a>
 
-                <button>
-                    Shader
-                </button>
+        <a href="shop10.html" class="shop-card">
+            <img src="shop10.jpg">
+        </a>
 
-                <button>
-                    Texture
-                </button>
+        <a href="shop11.html" class="shop-card">
+            <img src="shop11.jpg">
+        </a>
 
-                <button>
-                    Mods
-                </button>
+        <a href="shop12.html" class="shop-card">
+            <img src="shop12.jpg">
+        </a>
 
-            </div>
+    </div>
 
-        </section>
-
-        <!-- PROMOTION -->
-
-        <section class="section-box">
-
-            <div class="section-title">
-
-                <h2>📢 Promosi</h2>
-
-                <p>
-                    Promosi dan iklan pilihan terbaru.
-                </p>
-
-            </div>
-
-            <div class="promo-slider">
-
-                <a href="#" class="promo-card">
-                    <img src="promo1.jpg">
-                </a>
-
-                <a href="#" class="promo-card">
-                    <img src="promo2.jpg">
-                </a>
-
-                <a href="#" class="promo-card">
-                    <img src="promo3.jpg">
-                </a>
-
-                <a href="#" class="promo-card">
-                    <img src="promo4.jpg">
-                </a>
-
-                <a href="#" class="promo-card">
-                    <img src="promo5.jpg">
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- MINECRAFT -->
-
-        <section class="section-box">
-
-            <div class="section-title">
-
-                <h2>⛏ Minecraft</h2>
-
-                <p>
-                    Minecraft content pilihan terbaik.
-                </p>
-
-            </div>
-
-            <div class="minecraft-grid">
-
-                <a href="#" class="minecraft-card">
-
-                    <img src="mod.jpg">
-
-                    <h3>Mod</h3>
-
-                </a>
-
-                <a href="#" class="minecraft-card">
-
-                    <img src="shader.jpg">
-
-                    <h3>Shader</h3>
-
-                </a>
-
-                <a href="#" class="minecraft-card">
-
-                    <img src="texture.jpg">
-
-                    <h3>Texture</h3>
-
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- CONTENT -->
-
-        <section class="section-box">
-
-            <div class="section-title">
-
-                <h2>🎬 Content</h2>
-
-                <p>
-                    Konten terbaru dari creator.
-                </p>
-
-            </div>
-
-            <div class="content-slider">
-
-                <a href="#" class="content-card">
-
-                    <img src="content1.jpg">
-
-                    <h3>None</h3>
-
-                </a>
-
-                <a href="#" class="content-card">
-
-                    <img src="content2.jpg">
-
-                    <h3>None</h3>
-
-                </a>
-
-                <a href="#" class="content-card">
-
-                    <img src="content3.jpg">
-
-                    <h3>None</h3>
-
-                </a>
-
-                <a href="#" class="content-card">
-
-                    <img src="content4.jpg">
-
-                    <h3>None</h3>
-
-                </a>
-
-                <a href="#" class="content-card">
-
-                    <img src="content5.jpg">
-
-                    <h3>None</h3>
-
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- SHOP -->
-
-        <section class="section-box">
-
-            <div class="section-title">
-
-                <h2>🛒 Shop</h2>
-
-                <p>
-                    Pilihan item dan layanan terbaik.
-                </p>
-
-            </div>
-
-            <div class="shop-grid">
-
-                <a href="shop1.html" class="shop-card">
-                    <img src="shop1.jpg">
-                </a>
-
-                <a href="shop2.html" class="shop-card">
-                    <img src="shop2.jpg">
-                </a>
-
-                <a href="shop3.html" class="shop-card">
-                    <img src="shop3.jpg">
-                </a>
-
-                <a href="shop4.html" class="shop-card">
-                    <img src="shop4.jpg">
-                </a>
-
-                <a href="shop5.html" class="shop-card">
-                    <img src="shop5.jpg">
-                </a>
-
-                <a href="shop6.html" class="shop-card">
-                    <img src="shop6.jpg">
-                </a>
-
-                <a href="shop7.html" class="shop-card">
-                    <img src="shop7.jpg">
-                </a>
-
-                <a href="shop8.html" class="shop-card">
-                    <img src="shop8.jpg">
-                </a>
-
-                <a href="shop9.html" class="shop-card">
-                    <img src="shop9.jpg">
-                </a>
-
-                <a href="shop10.html" class="shop-card">
-                    <img src="shop10.jpg">
-                </a>
-
-                <a href="shop11.html" class="shop-card">
-                    <img src="shop11.jpg">
-                </a>
-
-                <a href="shop12.html" class="shop-card">
-                    <img src="shop12.jpg">
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
-
-        <div class="footer-wave"></div>
-
-        <div class="footer-content">
-
-            <a
-                href="index.html"
-                class="footer-logo"
-            >
-
-                <img src="logo.png">
-
-            </a>
-
-            <p class="footer-desc">
-
-                Deskripsi footer sementara.
-                Isi bebas nanti bisa diganti kapan aja.
-
-            </p>
-
-        </div>
-
-    </footer>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+</section>
