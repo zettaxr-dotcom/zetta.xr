@@ -9,7 +9,11 @@ function autoPromoSlide(){
 
     if(!promoSlider) return;
 
-    promoScroll += 334;
+    const cardWidth =
+    promoSlider.querySelector('.promo-card')
+    ?.offsetWidth || 324;
+
+    promoScroll += cardWidth + 14;
 
     if(
         promoScroll >=
@@ -39,7 +43,11 @@ function autoContentSlide(){
 
     if(!contentSlider) return;
 
-    contentScroll += 334;
+    const cardWidth =
+    contentSlider.querySelector('.content-card')
+    ?.offsetWidth || 324;
+
+    contentScroll += cardWidth + 14;
 
     if(
         contentScroll >=
@@ -90,19 +98,28 @@ sections.forEach(section => {
     section.style.opacity = "0";
     section.style.transform =
     "translateY(40px)";
-    section.style.transition = "0.7s";
+    section.style.transition =
+    "0.7s ease";
 
 });
 
-window.addEventListener('scroll',revealSection);
+window.addEventListener(
+'scroll',
+revealSection
+);
 
 revealSection();
 
-// CATEGORY BUTTON ACTIVE
+// CATEGORY BUTTON ACTIVE + AUTO SCROLL
 
 const categoryButtons =
 document.querySelectorAll(
 '.category-buttons button'
+);
+
+const minecraftSection =
+document.querySelector(
+'.minecraft-grid'
 );
 
 categoryButtons.forEach(button => {
@@ -116,6 +133,15 @@ categoryButtons.forEach(button => {
         });
 
         button.classList.add('active');
+
+        if(minecraftSection){
+
+            minecraftSection.scrollIntoView({
+                behavior:'smooth',
+                block:'start'
+            });
+
+        }
 
     });
 
@@ -135,8 +161,21 @@ buttons.forEach(button => {
 
         setTimeout(() => {
 
-            button.style.transform =
-            "scale(1)";
+            if(
+                button.classList.contains(
+                'active'
+                )
+            ){
+
+                button.style.transform =
+                "scale(1)";
+
+            }else{
+
+                button.style.transform =
+                "scale(1)";
+
+            }
 
         },120);
 
@@ -144,7 +183,7 @@ buttons.forEach(button => {
 
 });
 
-// SOCIAL EFFECT
+// SOCIAL EFFECT MOBILE + DESKTOP
 
 const socialBox =
 document.querySelectorAll(
@@ -153,17 +192,39 @@ document.querySelectorAll(
 
 socialBox.forEach(item => {
 
-    item.addEventListener('mouseenter',() => {
+    item.addEventListener(
+    'mouseenter',
+    () => {
 
         item.style.transform =
         "translateY(-6px) scale(1.05)";
 
     });
 
-    item.addEventListener('mouseleave',() => {
+    item.addEventListener(
+    'mouseleave',
+    () => {
 
         item.style.transform =
         "translateY(0px) scale(1)";
+
+    });
+
+    item.addEventListener(
+    'touchstart',
+    () => {
+
+        item.style.transform =
+        "scale(0.92)";
+
+    });
+
+    item.addEventListener(
+    'touchend',
+    () => {
+
+        item.style.transform =
+        "scale(1)";
 
     });
 
@@ -178,7 +239,8 @@ if(bgVideo){
 
     window.addEventListener('scroll',() => {
 
-        const scrollY = window.scrollY;
+        const scrollY =
+        window.scrollY;
 
         bgVideo.style.transform =
         `translateY(${scrollY * 0.15}px)`;
