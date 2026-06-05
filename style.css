@@ -10,69 +10,54 @@
 html{
     scroll-behavior:smooth;
     overflow-x:hidden;
+    width:100%;
 }
 
 body{
-    background:#0b0b0b;
+    background:#111;
     color:#fff;
     overflow-x:hidden;
-    min-height:100vh;
-    isolation:isolate;
+    width:100%;
+    max-width:100%;
+    position:relative;
 }
 
-/* =========================
-   🔥 BACKGROUND VIDEO FIX
-========================= */
-
-.bg-wrapper{
-    position:fixed;
-    inset:0;
-    z-index:0;
-}
+/* VIDEO BACKGROUND */
 
 .bg-video{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     object-fit:cover;
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    transform:translateZ(0);
+    z-index:-3;
 }
 
 .overlay{
-    position:absolute;
-    inset:0;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     background:rgba(0,0,0,0.55);
+    z-index:-2;
 }
 
-/* semua konten di atas bg */
-.topbar,
-.profile-section,
-.top-wave,
-main,
-.footer{
-    position:relative;
-    z-index:2;
-}
-
-/* =========================
-   🌟 TOPBAR PREMIUM
-========================= */
+/* TOPBAR */
 
 .topbar{
-    padding:14px 18px;
+    width:100%;
+    padding:14px 16px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     position:sticky;
     top:0;
     z-index:999;
-
-    background:rgba(20,20,20,0.55);
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(255,255,255,0.06);
+    background:rgba(20,20,20,0.78);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo-area{
@@ -82,11 +67,12 @@ main,
 }
 
 .logo-box{
-    width:46px;
-    height:46px;
-    border-radius:14px;
+    width:48px;
+    height:48px;
+    border-radius:16px;
     overflow:hidden;
-    background:#222;
+    background:#2b2b2b;
+    flex-shrink:0;
 }
 
 .logo-box img{
@@ -96,156 +82,179 @@ main,
 }
 
 .logo-text h1{
-    font-size:16px;
+    font-size:18px;
     font-weight:700;
+    line-height:1;
 }
 
 .logo-text p{
     font-size:11px;
-    color:#bdbdbd;
+    color:#cfcfcf;
+    margin-top:4px;
 }
 
 .top-icons{
     display:flex;
+    align-items:center;
     gap:10px;
 }
 
 .icon-btn{
-    width:44px;
-    height:44px;
-    border-radius:14px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width:46px;
+    height:46px;
+    border-radius:15px;
     background:rgba(255,255,255,0.08);
-    transition:.2s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.25s;
 }
 
 .icon-btn:active{
-    transform:scale(0.92);
+    transform:scale(0.93);
 }
 
-/* =========================
-   👤 PROFILE PREMIUM
-========================= */
+.icon-btn i{
+    font-size:20px;
+    color:#fff;
+}
+
+/* PROFILE */
 
 .profile-section{
-    padding:40px 18px 70px;
+    width:100%;
+    padding:30px 20px 80px;
+    position:relative;
+    z-index:5;
 }
 
 .profile-box{
-    max-width:460px;
+    width:100%;
+    max-width:450px;
     margin:auto;
     text-align:center;
 }
 
 .profile-img{
-    width:110px;
-    height:110px;
+    width:115px;
+    height:115px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid rgba(255,255,255,0.15);
-    margin-bottom:12px;
+    border:4px solid rgba(255,255,255,0.15);
+    margin-bottom:15px;
 }
 
 .profile-box h1{
-    font-size:28px;
-    font-weight:800;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:6px;
 }
 
 .profile-box h2{
-    font-size:14px;
-    color:#cfcfcf;
+    font-size:15px;
+    color:#d5d5d5;
+    margin-bottom:15px;
 }
 
 .profile-box p{
-    font-size:13px;
-    margin-top:10px;
+    font-size:14px;
+    line-height:1.7;
     color:#d7d7d7;
-    line-height:1.6;
+    margin-bottom:25px;
 }
 
-/* =========================
-   🌐 SOCIAL PREMIUM
-========================= */
+/* SOCIAL */
 
 .social-media{
-    margin-top:18px;
     display:flex;
     justify-content:center;
+    gap:12px;
     flex-wrap:wrap;
-    gap:10px;
 }
 
 .social-media a{
-    width:50px;
-    height:50px;
-    border-radius:16px;
-    background:rgba(255,255,255,0.08);
+    width:52px;
+    height:52px;
+    background:#3b3b3b;
+    border-radius:18px;
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:.2s;
+    transition:0.3s;
 }
 
 .social-media a:active{
-    transform:scale(0.9);
+    transform:scale(0.92);
 }
 
 .social-media img{
     width:24px;
     height:24px;
+    object-fit:contain;
 }
 
-/* =========================
-   🌊 WAVE
-========================= */
+/* TOP WAVE */
 
 .top-wave{
-    height:90px;
+    width:100%;
+    height:120px;
     background:#4b4b4b;
     border-radius:50% 50% 0 0;
+    margin-top:-20px;
+    position:relative;
+    z-index:3;
+    overflow:hidden;
 }
 
-/* =========================
-   🧱 MAIN SECTION
-========================= */
+/* MAIN */
 
 main{
+    width:100%;
     background:#4b4b4b;
     padding:20px 15px 40px;
+    position:relative;
+    z-index:2;
+    overflow:hidden;
 }
 
-/* TITLE */
+/* SECTION */
+
+.section-box{
+    margin-bottom:45px;
+}
+
+.section-title{
+    margin-bottom:18px;
+}
 
 .section-title h2{
-    font-size:20px;
-    font-weight:800;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:6px;
 }
 
 .section-title p{
     font-size:13px;
     color:#d0d0d0;
+    line-height:1.6;
 }
 
-/* =========================
-   🟪 POPULAR CARDS PREMIUM
-========================= */
+/* POPULAR */
 
 .popular-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:12px;
+    gap:14px;
 }
 
 .popular-card{
-    background:rgba(255,255,255,0.06);
-    border-radius:20px;
+    background:#555;
+    border-radius:22px;
     overflow:hidden;
     text-decoration:none;
     color:#fff;
-    transition:.2s;
-    backdrop-filter:blur(6px);
+    transition:0.25s;
 }
 
 .popular-card:active{
@@ -256,61 +265,91 @@ main{
     width:100%;
     height:130px;
     object-fit:cover;
+    display:block;
 }
 
 .popular-info{
-    padding:10px;
+    padding:12px;
 }
 
 .popular-info h3{
-    font-size:14px;
-    font-weight:700;
+    font-size:15px;
+    margin-bottom:4px;
 }
 
-/* =========================
-   🎛 CATEGORY BAR
-========================= */
+.popular-info p{
+    font-size:12px;
+    line-height:1.5;
+    color:#e0e0e0;
+}
+
+/* CATEGORY */
 
 .category-buttons{
     display:flex;
-    gap:10px;
+    gap:12px;
     overflow-x:auto;
+    scrollbar-width:none;
     padding-bottom:5px;
+}
+
+.category-buttons::-webkit-scrollbar{
+    display:none;
 }
 
 .category-buttons button{
     border:none;
-    padding:10px 16px;
-    border-radius:14px;
-    background:rgba(255,255,255,0.08);
+    background:#5f5f5f;
     color:#fff;
+    padding:11px 20px;
+    border-radius:14px;
+    font-size:13px;
     white-space:nowrap;
+    cursor:pointer;
+    transition:0.25s;
+    flex-shrink:0;
+}
+
+.category-buttons button:active{
+    transform:scale(0.93);
 }
 
 .category-buttons button.active{
-    background:#fff;
-    color:#111;
+    background:#3d3d3d;
+    color:#fff;
 }
 
-/* =========================
-   🎞 SLIDERS
-========================= */
+/* PROMOTION */
 
-.promo-slider,
-.content-slider{
+.promo-slider{
     display:flex;
-    gap:12px;
+    gap:14px;
     overflow-x:auto;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+    padding-bottom:4px;
 }
 
-.promo-card img,
-.content-card img{
-    border-radius:18px;
+.promo-slider::-webkit-scrollbar{
+    display:none;
 }
 
-/* =========================
-   ⛏ MINECRAFT GRID
-========================= */
+.promo-card{
+    min-width:310px;
+    max-width:310px;
+    border-radius:22px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.promo-card img{
+    width:100%;
+    height:175px;
+    object-fit:cover;
+    display:block;
+}
+
+/* MINECRAFT */
 
 .minecraft-grid{
     display:grid;
@@ -318,9 +357,63 @@ main{
     gap:12px;
 }
 
-/* =========================
-   🛒 SHOP GRID
-========================= */
+.minecraft-card{
+    text-decoration:none;
+    color:#fff;
+}
+
+.minecraft-card img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+}
+
+.minecraft-card h3{
+    text-align:center;
+    margin-top:8px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* CONTENT */
+
+.content-slider{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+    padding-bottom:4px;
+}
+
+.content-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.content-card{
+    min-width:310px;
+    max-width:310px;
+    text-decoration:none;
+    color:#fff;
+    flex-shrink:0;
+}
+
+.content-card img{
+    width:100%;
+    height:175px;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+}
+
+.content-card h3{
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* SHOP */
 
 .shop-grid{
     display:grid;
@@ -328,19 +421,92 @@ main{
     gap:12px;
 }
 
-/* =========================
-   📱 DESKTOP
-========================= */
+.shop-card{
+    text-decoration:none;
+}
+
+.shop-card img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+}
+
+/* FOOTER */
+
+.footer{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    margin-top:-1px;
+    background:#111;
+}
+
+/* FOOTER WAVE */
+
+.footer-wave{
+    width:100%;
+    height:120px;
+    background:#4b4b4b;
+    border-radius:0 0 50% 50%;
+    margin-bottom:-2px;
+    overflow:hidden;
+}
+
+/* FOOTER CONTENT */
+
+.footer-content{
+    width:100%;
+    background:#111;
+    padding:50px 25px 60px;
+}
+
+.footer-logo{
+    width:85px;
+    height:85px;
+    border-radius:24px;
+    overflow:hidden;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1f1f1f;
+}
+
+.footer-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.footer-desc{
+    max-width:420px;
+    color:#d6d6d6;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* DESKTOP */
 
 @media(min-width:900px){
+
+    .profile-box{
+        max-width:650px;
+    }
 
     .popular-grid{
         grid-template-columns:repeat(3,1fr);
     }
 
-    .minecraft-grid,
+    .minecraft-grid{
+        grid-template-columns:repeat(6,160px);
+        justify-content:center;
+    }
+
     .shop-grid{
         grid-template-columns:repeat(6,160px);
         justify-content:center;
     }
+
 }
